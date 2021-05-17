@@ -1,8 +1,10 @@
 # FreeTypeAda – Ada Binding for FreeType
 
-*FreeTypeAda* is a thick Ada 2005 binding to the [FreeType library][1]. It is
-developed alongside [OpenGLAda][2] to enable font rendering with OpenGL. The
-binding is not complete, features are being added as needed or upon request.
+*FreeTypeAda* is a thick Ada 2012 binding to the [FreeType library][1].
+The binding is incomplete and has been developed to support [OpenGLAda][2].
+
+If you need features that are not yet available, you are welcome to open an
+issue or submit a pull request.
 
 ## License
 

@@ -11,6 +11,7 @@ library project FreeType is
    type Mode_Type is ("debug", "release");
    Mode : Mode_Type := external ("Mode", "debug");
 
+   FreeTypeLib := external ("FreeType_Linker_Param", "-lfreetype");
    for Library_Kind use Library_Kind;
 
    package Ide is
@@ -27,7 +28,7 @@ library project FreeType is
    end Builder;
 
    package Compiler is
-      Base_Switches := ("-gnat05", "-gnatwa", "-gnatwl",
+      Base_Switches := ("-gnat12", "-gnatwa", "-gnatwl",
                         "-gnaty3abcefhiklmNprt", "-fstack-check");
       case Mode is
          when "debug" =>
@@ -39,7 +40,6 @@ library project FreeType is
    end Compiler;
 
    package Linker is
-      for Linker_Options use ("-l" & external ("FREETYPE_LIBRARY_NAME",
-                                               "freetype"));
+      for Linker_Options use (FreeTypeLib);
    end Linker;
 end FreeType;
