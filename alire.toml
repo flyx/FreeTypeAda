@@ -7,6 +7,10 @@ authors = ["Felix Krause"]
 maintainers = ["Felix Krause <contact@flyx.org>"]
 maintainers-logins = ["flyx"]
 
+licenses = "MIT"
+website = "https://github.com/flyx/FreeTypeAda"
+tags = ["fonts", "rendering"]
+
 [[depends-on]]
 [depends-on."case(os)"."linux|windows"]
 libfreetype = "^2"
